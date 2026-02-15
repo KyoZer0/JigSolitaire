@@ -224,6 +224,13 @@
         }
       }
     }
+
+    setVolume(val) {
+      this.volume = Math.max(0, Math.min(1, parseFloat(val)));
+      if (this.playing && this.currentAudio) {
+        this.currentAudio.volume = this.volume;
+      }
+    }
   }
 
   // ==========================================
@@ -352,6 +359,7 @@
         { id: 28, title: 'Bird', cols: 4, rows: 4, difficulty: 'Hard', img: 'bird.jpg' },
         { id: 29, title: 'Playful Friends', cols: 5, rows: 3, difficulty: 'Expert', img: 'dog_cat.jpg' },
         { id: 30, title: 'Colorful Parrot', cols: 5, rows: 4, difficulty: 'Master', img: 'parrot.jpg' },
+        {id:51, title:'Orange dog', cols:3, rows:3, difficulty:'Easy', img:'orange_dog.jpg'}
       ],
     },
     {
@@ -532,8 +540,33 @@
     if (soundEnabled) sfx.click();
   }
 
-  document.getElementById('sound-toggle-menu').addEventListener('click', toggleSound);
-  document.getElementById('sound-toggle-game').addEventListener('click', toggleSound);
+  document.getElementById('sound-toggle-menu').addEventListener('click', (e) => {
+    if (e.target.tagName !== 'INPUT') toggleSound();
+  });
+  document.getElementById('sound-toggle-game').addEventListener('click', (e) => {
+    if (e.target.tagName !== 'INPUT') toggleSound();
+  });
+
+  // Volume Sliders
+  const volMenu = document.getElementById('volume-slider-menu');
+  const volGame = document.getElementById('volume-slider-game');
+  
+  function updateVolume(e) {
+    const val = e.target.value;
+    music.setVolume(val);
+    volMenu.value = val;
+    volGame.value = val;
+    // If volume is > 0 and sound is off, turn it on
+    if (val > 0 && !soundEnabled) toggleSound();
+  }
+
+  volMenu.addEventListener('input', updateVolume);
+  volGame.addEventListener('input', updateVolume);
+  
+  // Set initial volume
+  volMenu.value = music.volume;
+  volGame.value = music.volume;
+
   updateSoundUI();
 
   // Initialize sound on any first interaction
@@ -771,8 +804,8 @@
     updateMoveCounter();
     updateTimer();
 
-    // Wait 5 seconds, then shuffle with animation
-    await new Promise(resolve => setTimeout(resolve, 5000));
+    // Wait 3 seconds, then shuffle with animation
+    await new Promise(resolve => setTimeout(resolve, 3000));
 
     // Shuffle
     for (let i = total - 1; i > 0; i--) {
