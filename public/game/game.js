@@ -340,53 +340,78 @@
 
   const CATEGORIES = [
     {
-      slug: 'animals', name: 'Animals', color: '#ef4444', imgSeed: 'animals-cat',
+      slug: 'animals', name: 'Animals', color: '#ef4444', img: 'dog_cat.jpg',
       levels: [
-        { id: 1, title: 'Playful Kitten', cols: 3, rows: 3, difficulty: 'Easy', seed: 'kitten' },
-        { id: 2, title: 'Tropical Parrot', cols: 3, rows: 3, difficulty: 'Easy', seed: 'parrot' },
-        { id: 3, title: 'Ocean Dolphins', cols: 4, rows: 4, difficulty: 'Medium', seed: 'dolphin' },
-        { id: 4, title: 'Safari Lion', cols: 4, rows: 4, difficulty: 'Hard', seed: 'lion' },
-        { id: 5, title: 'Arctic Fox', cols: 5, rows: 3, difficulty: 'Expert', seed: 'arctic-fox' },
+        { id: 1, title: 'Dog & Cat', cols: 3, rows: 3, difficulty: 'Easy', img: 'dog_cat.jpg' },
+        { id: 2, title: 'Parrot', cols: 3, rows: 3, difficulty: 'Easy', img: 'parrot.jpg' },
+        { id: 3, title: 'Black Dog', cols: 4, rows: 4, difficulty: 'Medium', img: 'black_dog.jpg' },
+        { id: 4, title: 'White Horse', cols: 4, rows: 4, difficulty: 'Hard', img: 'white_horse.jpg' },
+        { id: 5, title: 'Orange Hoodie', cols: 5, rows: 3, difficulty: 'Expert', img: 'dog_with_orange_hoodie.jpg' },
+        { id: 26, title: 'Birthday Dog', cols: 3, rows: 3, difficulty: 'Easy', img: 'dog_birthday.jpg' },
+        { id: 27, title: 'White Dog', cols: 4, rows: 4, difficulty: 'Medium', img: 'white_dog.jpg' },
+        { id: 28, title: 'Bird', cols: 4, rows: 4, difficulty: 'Hard', img: 'bird.jpg' },
+        { id: 29, title: 'Playful Friends', cols: 5, rows: 3, difficulty: 'Expert', img: 'dog_cat.jpg' },
+        { id: 30, title: 'Colorful Parrot', cols: 5, rows: 4, difficulty: 'Master', img: 'parrot.jpg' },
       ],
     },
     {
-      slug: 'nature', name: 'Nature', color: '#22c55e', imgSeed: 'nature-cat',
+      slug: 'nature', name: 'Nature', color: '#22c55e', img: 'lake.jpg',
       levels: [
-        { id: 6, title: 'Mountain Sunrise', cols: 3, rows: 3, difficulty: 'Easy', seed: 'mountain' },
-        { id: 7, title: 'Autumn Forest', cols: 3, rows: 3, difficulty: 'Easy', seed: 'autumn' },
-        { id: 8, title: 'Ocean Waves', cols: 4, rows: 4, difficulty: 'Medium', seed: 'ocean' },
-        { id: 9, title: 'Cherry Blossoms', cols: 4, rows: 4, difficulty: 'Hard', seed: 'cherry' },
-        { id: 10, title: 'Northern Lights', cols: 5, rows: 3, difficulty: 'Expert', seed: 'aurora' },
+        { id: 6, title: 'Serene Lake', cols: 3, rows: 3, difficulty: 'Easy', img: 'lake.jpg' },
+        { id: 7, title: 'Autumn Leaf', cols: 3, rows: 3, difficulty: 'Easy', img: 'Autumn_leaf.jpg' },
+        { id: 8, title: 'Under the Sea', cols: 4, rows: 4, difficulty: 'Medium', img: 'under_the_sea.jpg' },
+        { id: 9, title: 'Pink Flower', cols: 4, rows: 4, difficulty: 'Hard', img: 'pink_flower.jpg' },
+        { id: 10, title: 'Purple Plant', cols: 5, rows: 3, difficulty: 'Expert', img: 'purple_plant.jpg' },
+        { id: 31, title: 'Yellow Flower', cols: 3, rows: 3, difficulty: 'Easy', img: 'yellow_flower.jpg' },
+        { id: 32, title: 'Green Grass', cols: 4, rows: 4, difficulty: 'Medium', img: 'grass.jpg' },
+        { id: 33, title: 'Train Journey', cols: 4, rows: 4, difficulty: 'Hard', img: 'train.jpg' },
+        { id: 34, title: 'Autumn Vibes', cols: 5, rows: 3, difficulty: 'Expert', img: 'Autumn_leaf.jpg' },
+        { id: 35, title: 'Deep Ocean', cols: 5, rows: 4, difficulty: 'Master', img: 'under_the_sea.jpg' },
       ],
     },
     {
-      slug: 'cities', name: 'Cities', color: '#6366f1', imgSeed: 'cities-cat',
+      slug: 'cities', name: 'Cities', color: '#6366f1', img: 'paris.jpg',
       levels: [
-        { id: 11, title: 'Paris Eiffel', cols: 3, rows: 3, difficulty: 'Easy', seed: 'paris' },
-        { id: 12, title: 'Tokyo Nights', cols: 3, rows: 3, difficulty: 'Easy', seed: 'tokyo' },
-        { id: 13, title: 'New York Skyline', cols: 4, rows: 4, difficulty: 'Medium', seed: 'newyork' },
-        { id: 14, title: 'Venice Canals', cols: 4, rows: 4, difficulty: 'Hard', seed: 'venice' },
-        { id: 15, title: 'Dubai Lights', cols: 5, rows: 3, difficulty: 'Expert', seed: 'dubai' },
+        { id: 11, title: 'Paris Eiffel', cols: 3, rows: 3, difficulty: 'Easy', img: 'paris.jpg' },
+        { id: 12, title: 'New York', cols: 3, rows: 3, difficulty: 'Easy', img: 'newyork.jpg' },
+        { id: 13, title: 'Rome Steps', cols: 4, rows: 4, difficulty: 'Medium', img: 'rome.jpg' },
+        { id: 14, title: 'Modern Building', cols: 4, rows: 4, difficulty: 'Hard', img: 'building_lake.jpg' },
+        { id: 15, title: 'Mosque Architecture', cols: 5, rows: 3, difficulty: 'Expert', img: 'islamic_mosque.jpg' },
+        { id: 36, title: 'Orange Houses', cols: 3, rows: 3, difficulty: 'Easy', img: 'orange_houses.jpg' },
+        { id: 37, title: 'City Elevator', cols: 4, rows: 4, difficulty: 'Medium', img: 'elevator.jpg' },
+        { id: 38, title: 'Green Cross', cols: 4, rows: 4, difficulty: 'Hard', img: 'pharmacie.jpg' },
+        { id: 39, title: 'Paris Night', cols: 5, rows: 3, difficulty: 'Expert', img: 'paris.jpg' },
+        { id: 40, title: 'Urban Jungle', cols: 5, rows: 4, difficulty: 'Master', img: 'newyork.jpg' },
       ],
     },
     {
-      slug: 'art', name: 'Art', color: '#f97316', imgSeed: 'art-cat',
+      slug: 'art', name: 'Art', color: '#f97316', img: 'color_tunnel.jpg',
       levels: [
-        { id: 16, title: 'Starry Night', cols: 3, rows: 3, difficulty: 'Easy', seed: 'painting' },
-        { id: 17, title: 'Abstract Colors', cols: 3, rows: 3, difficulty: 'Easy', seed: 'abstract' },
-        { id: 18, title: 'Watercolor Garden', cols: 4, rows: 4, difficulty: 'Medium', seed: 'watercolor' },
-        { id: 19, title: 'Pop Art Faces', cols: 4, rows: 4, difficulty: 'Hard', seed: 'popart' },
-        { id: 20, title: 'Renaissance Study', cols: 5, rows: 3, difficulty: 'Expert', seed: 'renaissance' },
+        { id: 16, title: 'Color Tunnel', cols: 3, rows: 3, difficulty: 'Easy', img: 'color_tunnel.jpg' },
+        { id: 17, title: 'Color Lines', cols: 3, rows: 3, difficulty: 'Easy', img: 'color_lines.jpg' },
+        { id: 18, title: 'Abstract Fruits', cols: 4, rows: 4, difficulty: 'Medium', img: 'abstract_fruits_poster.jpg' },
+        { id: 19, title: 'Ice Cream Art', cols: 4, rows: 4, difficulty: 'Hard', img: 'ice_cream_poster.jpg' },
+        { id: 20, title: 'Coloring Tools', cols: 5, rows: 3, difficulty: 'Expert', img: 'coloring_tools.jpg' },
+        { id: 41, title: 'Mechanical Gears', cols: 3, rows: 3, difficulty: 'Easy', img: 'gears.jpg' },
+        { id: 42, title: 'Shoe Art', cols: 4, rows: 4, difficulty: 'Medium', img: 'shoes.jpg' },
+        { id: 43, title: 'Tunnel Vision', cols: 4, rows: 4, difficulty: 'Hard', img: 'color_tunnel.jpg' },
+        { id: 44, title: 'Bright Lines', cols: 5, rows: 3, difficulty: 'Expert', img: 'color_lines.jpg' },
+        { id: 45, title: 'Fruity Poster', cols: 5, rows: 4, difficulty: 'Master', img: 'abstract_fruits_poster.jpg' },
       ],
     },
     {
-      slug: 'food', name: 'Food', color: '#eab308', imgSeed: 'food-cat',
+      slug: 'food', name: 'Food', color: '#eab308', img: 'fruit.jpg',
       levels: [
-        { id: 21, title: 'Fresh Sushi', cols: 3, rows: 3, difficulty: 'Easy', seed: 'sushi' },
-        { id: 22, title: 'Berry Basket', cols: 3, rows: 3, difficulty: 'Easy', seed: 'berries' },
-        { id: 23, title: 'Italian Pizza', cols: 4, rows: 4, difficulty: 'Medium', seed: 'pizza' },
-        { id: 24, title: 'Chocolate Dream', cols: 4, rows: 4, difficulty: 'Hard', seed: 'chocolate' },
-        { id: 25, title: 'Farmers Market', cols: 5, rows: 3, difficulty: 'Expert', seed: 'market' },
+        { id: 21, title: 'Fresh Fruit', cols: 3, rows: 3, difficulty: 'Easy', img: 'fruit.jpg' },
+        { id: 22, title: 'Black Berries', cols: 3, rows: 3, difficulty: 'Easy', img: 'black_fruit.jpg' },
+        { id: 23, title: 'Pineapple', cols: 4, rows: 4, difficulty: 'Medium', img: 'pinaple.jpg' },
+        { id: 24, title: 'Fresh Tomatoes', cols: 4, rows: 4, difficulty: 'Hard', img: 'tomatos.jpg' },
+        { id: 25, title: 'Fruit Basket', cols: 5, rows: 3, difficulty: 'Expert', img: 'fruit.jpg' },
+        { id: 46, title: 'Berry Mix', cols: 3, rows: 3, difficulty: 'Easy', img: 'black_fruit.jpg' },
+        { id: 47, title: 'Tropical Pineapple', cols: 4, rows: 4, difficulty: 'Medium', img: 'pinaple.jpg' },
+        { id: 48, title: 'Red Tomatoes', cols: 4, rows: 4, difficulty: 'Hard', img: 'tomatos.jpg' },
+        { id: 49, title: 'Healthy Choice', cols: 5, rows: 3, difficulty: 'Expert', img: 'fruit.jpg' },
+        { id: 50, title: 'Dark Berries', cols: 5, rows: 4, difficulty: 'Master', img: 'black_fruit.jpg' },
       ],
     },
   ];
@@ -535,40 +560,36 @@
   // ==========================================
   // IMAGE LOADING
   // ==========================================
-  function picUrl(seed, w, h) {
-    return `https://picsum.photos/seed/${seed}/${w}/${h}`;
+  function picUrl(cat, img, w, h) {
+    // Local images: /levels/Category/filename.jpg
+    const catFolder = cat.name; // e.g. "Animals"
+    return `/levels/${catFolder}/${img}`;
   }
 
-  function loadImage(seed, w, h) {
+  function loadImage(cat, img) {
     return new Promise((resolve) => {
-      const img = new Image();
-      img.crossOrigin = 'anonymous';
-      img.onload = () => resolve(img);
-      img.onerror = () => resolve(generateFallback(seed, w, h));
-      img.src = picUrl(seed, w, h);
+      const image = new Image();
+      image.crossOrigin = 'anonymous';
+      image.onload = () => resolve(image);
+      image.onerror = () => {
+        console.error('Image failed to load:', cat.name, img);
+        // Fallback: simple colored placeholder
+        const c = document.createElement('canvas');
+        c.width = 600; c.height = 400;
+        const ctx = c.getContext('2d');
+        ctx.fillStyle = cat.color;
+        ctx.fillRect(0, 0, c.width, c.height);
+        ctx.fillStyle = '#fff';
+        ctx.font = '24px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('Image not found', c.width/2, c.height/2);
+        resolve(c);
+      };
+      image.src = picUrl(cat, img, 600, 400);
     });
   }
 
-  function generateFallback(seed, w, h) {
-    const c = document.createElement('canvas');
-    c.width = w; c.height = h;
-    const x = c.getContext('2d');
-    const s = typeof seed === 'string' ? seed.split('').reduce((a, ch) => a + ch.charCodeAt(0), 0) : seed;
-    const h1 = (s * 47) % 360, h2 = (h1 + 80) % 360;
-    const grad = x.createLinearGradient(0, 0, w, h);
-    grad.addColorStop(0, `hsl(${h1}, 55%, 65%)`);
-    grad.addColorStop(1, `hsl(${h2}, 50%, 60%)`);
-    x.fillStyle = grad;
-    x.fillRect(0, 0, w, h);
-    for (let i = 0; i < 8; i++) {
-      x.save(); x.globalAlpha = 0.15;
-      x.fillStyle = `hsl(${(h1 + i * 45) % 360}, 60%, 70%)`;
-      x.beginPath();
-      x.arc((s * (i + 1) * 73) % w, (s * (i + 1) * 97) % h, 20 + (s * (i + 1) * 31) % 60, 0, Math.PI * 2);
-      x.fill(); x.restore();
-    }
-    return c;
-  }
 
   // ==========================================
   // MENU
@@ -583,7 +604,7 @@
       card.className = 'category-card';
       card.style.animationDelay = `${0.15 + catIndex * 0.1}s`;
       card.innerHTML = `
-        <img class="cat-thumbnail" src="${picUrl(cat.imgSeed, 400, 260)}" alt="${cat.name}" loading="lazy">
+        <img class="cat-thumbnail" src="${picUrl(cat, cat.img)}" alt="${cat.name}" loading="lazy">
         <div class="cat-body">
           <div class="cat-name">${cat.name}</div>
           <div class="cat-meta">
@@ -604,7 +625,7 @@
 
   function openCategory(cat) {
     currentCategory = cat;
-    levelCatImg.innerHTML = `<img src="${picUrl(cat.imgSeed, 144, 144)}" alt="${cat.name}">`;
+    levelCatImg.innerHTML = `<img src="${picUrl(cat, cat.img)}" alt="${cat.name}">`;
     levelCatName.textContent = cat.name;
     levelCatDesc.textContent = CAT_DESC[cat.slug] || '';
     levelGrid.innerHTML = '';
@@ -622,7 +643,8 @@
       else statusIcon = ICON.play;
 
       card.innerHTML = `
-        <img class="level-thumb" src="${picUrl(level.seed, 400, 220)}" alt="${level.title}" loading="lazy">
+
+        <img class="level-thumb" src="${picUrl(cat, level.img)}" alt="${level.title}" loading="lazy">
         <div class="level-body">
           <span class="level-title">${level.title}</span>
           <div class="level-meta-right">
@@ -698,7 +720,9 @@
     ctx.textBaseline = 'middle';
     ctx.fillText('Loading...', bW / 2, bH / 2);
 
-    sourceImage = await loadImage(level.seed, bW, bH);
+    ctx.fillText('Loading...', bW / 2, bH / 2);
+
+    sourceImage = await loadImage(cat, level.img);
     pctx.clearRect(0, 0, previewCanvas.width, previewCanvas.height);
     pctx.drawImage(sourceImage, 0, 0, previewCanvas.width, previewCanvas.height);
 
