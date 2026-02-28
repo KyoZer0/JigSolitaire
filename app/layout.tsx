@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from 'next/script';
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
   publisher: "JigSolitaire",
   metadataBase: new URL("https://jigsolitaire.online"),
   alternates: {
-    canonical: "./",
+    canonical: "/",
   },
   openGraph: {
     type: "website",
@@ -70,14 +71,31 @@ export const metadata: Metadata = {
   },
 };
 
+function getPublisherId() {
+  const raw = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID;
+  if (!raw) return '';
+  return raw.startsWith('ca-pub-') ? raw : `ca-pub-${raw}`;
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const publisherId = getPublisherId();
+
   return (
     <html lang="en">
       <head>
+        {publisherId ? (
+          <Script
+            id="adsense-script"
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${publisherId}`}
+            crossOrigin="anonymous"
+            strategy="afterInteractive"
+          />
+        ) : null}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
