@@ -3,11 +3,32 @@
 import { useState } from 'react';
 import AdSlot from '../components/AdSlot';
 
+const SUPPORT_EMAIL = 'hello@jigsolitaire.online';
+
 export default function ContactPage() {
     const [submitted, setSubmitted] = useState(false);
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+    });
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+
+        const mailSubject = `[JigSolitaire] ${formData.subject || 'General Inquiry'}`;
+        const mailBody = [
+            `Name: ${formData.name}`,
+            `Email: ${formData.email}`,
+            `Topic: ${formData.subject}`,
+            '',
+            formData.message,
+        ].join('\n');
+
+        const mailtoUrl = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+
+        window.location.href = mailtoUrl;
         setSubmitted(true);
     };
 
@@ -36,7 +57,7 @@ export default function ContactPage() {
                         margin: '2rem 0',
                     }}>
                         {[
-                            { icon: '📧', label: 'Email', value: 'hello@jigsolitaire.online' },
+                            { icon: '📧', label: 'Email', value: SUPPORT_EMAIL },
                             { icon: '⏱️', label: 'Response Time', value: 'Within 48 hours' },
                             { icon: '🌍', label: 'Available', value: 'Worldwide' },
                         ].map((item) => (
@@ -58,10 +79,10 @@ export default function ContactPage() {
                             padding: '3rem 2rem',
                             borderColor: 'var(--accent)',
                         }}>
-                            <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>✅</div>
-                            <h3 style={{ marginBottom: '0.5rem' }}>Thank You!</h3>
+                            <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>📨</div>
+                            <h3 style={{ marginBottom: '0.5rem' }}>Email app opened</h3>
                             <p style={{ color: 'var(--text-secondary)' }}>
-                                Your message has been received. We&apos;ll get back to you within 48 hours.
+                                If your email app did not open, send your message manually to {SUPPORT_EMAIL}.
                             </p>
                         </div>
                     ) : (
@@ -81,6 +102,8 @@ export default function ContactPage() {
                                     type="text"
                                     required
                                     placeholder="Enter your name"
+                                    value={formData.name}
+                                    onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
                                     style={{
                                         width: '100%',
                                         padding: '0.875rem 1rem',
@@ -110,6 +133,8 @@ export default function ContactPage() {
                                     type="email"
                                     required
                                     placeholder="your@email.com"
+                                    value={formData.email}
+                                    onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
                                     style={{
                                         width: '100%',
                                         padding: '0.875rem 1rem',
@@ -137,6 +162,8 @@ export default function ContactPage() {
                                 <select
                                     id="subject"
                                     required
+                                    value={formData.subject}
+                                    onChange={(e) => setFormData((prev) => ({ ...prev, subject: e.target.value }))}
                                     style={{
                                         width: '100%',
                                         padding: '0.875rem 1rem',
@@ -149,12 +176,12 @@ export default function ContactPage() {
                                     }}
                                 >
                                     <option value="">Select a topic</option>
-                                    <option value="feedback">General Feedback</option>
-                                    <option value="bug">Bug Report</option>
-                                    <option value="feature">Feature Request</option>
-                                    <option value="partnership">Partnership Inquiry</option>
-                                    <option value="privacy">Privacy Concern</option>
-                                    <option value="other">Other</option>
+                                    <option value="General Feedback">General Feedback</option>
+                                    <option value="Bug Report">Bug Report</option>
+                                    <option value="Feature Request">Feature Request</option>
+                                    <option value="Partnership Inquiry">Partnership Inquiry</option>
+                                    <option value="Privacy Concern">Privacy Concern</option>
+                                    <option value="Other">Other</option>
                                 </select>
                             </div>
 
@@ -173,6 +200,8 @@ export default function ContactPage() {
                                     required
                                     rows={6}
                                     placeholder="Tell us what's on your mind..."
+                                    value={formData.message}
+                                    onChange={(e) => setFormData((prev) => ({ ...prev, message: e.target.value }))}
                                     style={{
                                         width: '100%',
                                         padding: '0.875rem 1rem',
@@ -189,7 +218,7 @@ export default function ContactPage() {
                             </div>
 
                             <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>
-                                Send Message
+                                Compose Email
                             </button>
                         </form>
                     )}

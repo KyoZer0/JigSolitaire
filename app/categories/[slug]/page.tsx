@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { categories, getCategoryBySlug } from '../../lib/gameData';
@@ -9,14 +10,45 @@ export function generateStaticParams() {
 }
 
 // Generate metadata for each category
-export function generateMetadata({ params }: { params: { slug: string } }) {
-    const cat = getCategoryBySlug(params.slug);
-    if (!cat) return {};
+export async function generateMetadata(
+    { params }: { params: Promise<{ slug: string }> }
+): Promise<Metadata> {
+    const { slug } = await params;
+    const cat = getCategoryBySlug(slug);
+
+    if (!cat) {
+        return {
+            title: 'Category Not Found',
+            description: 'The requested category could not be found on JigSolitaire.',
+            robots: {
+                index: false,
+                follow: false,
+            },
+        };
+    }
+
+    const title = `${cat.name} Puzzles – ${cat.levels.length} Levels`;
+    const description = `Play ${cat.name.toLowerCase()} puzzles on JigSolitaire. ${cat.description} ${cat.levels.length} levels from easy to expert.`;
+    const canonicalUrl = `/categories/${cat.slug}`;
 
     return {
-        title: `${cat.name} Puzzles – ${cat.levels.length} Levels`,
-        description: `Play ${cat.name.toLowerCase()} puzzles on JigSolitaire. ${cat.description} ${cat.levels.length} levels from easy to expert.`,
+        title,
+        description,
         keywords: [`${cat.name.toLowerCase()} puzzles`, `${cat.name.toLowerCase()} jigsaw`, `JigSolitaire ${cat.name.toLowerCase()}`, 'free puzzle game'],
+        alternates: {
+            canonical: canonicalUrl,
+        },
+        openGraph: {
+            title,
+            description,
+            url: canonicalUrl,
+            type: 'website',
+        },
+        twitter: {
+            title,
+            description,
+            card: 'summary_large_image',
+        },
     };
 }
 
