@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import AdSlot from '../../components/AdSlot';
+import AuthorByline from '../../components/AuthorByline';
+import Sources from '../../components/Sources';
+import RelatedArticles from '../../components/RelatedArticles';
 
 export const metadata: Metadata = {
     title: 'What is JigSolitaire? The Ultimate Puzzle Experience',
@@ -22,6 +25,8 @@ export default function WhatIsJigSolitairePage() {
             </div>
 
             <div className="page-content">
+                <AuthorByline date="February 10, 2026" readTime="5 min read" />
+
                 <p>
                     If you&apos;ve ever loved the satisfying click of a jigsaw piece snapping into place, or the
                     strategic planning of a solitaire card game, JigSolitaire is the game you&apos;ve been waiting
@@ -38,28 +43,30 @@ export default function WhatIsJigSolitairePage() {
                 <p>
                     Unlike traditional jigsaw puzzles where pieces have irregular shapes that physically fit
                     together, JigSolitaire uses a clean grid system. This makes the game accessible to
-                    everyone while adding a strategic layer that jigsaw puzzles don&apos;t have — you need to
-                    think about the most efficient sequence of swaps.
+                    everyone while adding a strategic layer — you need to think about the most efficient
+                    sequence of swaps, exercising your spatial reasoning and planning skills.
                 </p>
 
                 <AdSlot type="in-content" />
 
                 <h2>What Makes It Unique</h2>
                 <p>
-                    Several features set JigSolitaire apart from other puzzle games on the web:
+                    Several features set JigSolitaire apart from other puzzle games:
                 </p>
                 <h3>Intelligent Tile Merging</h3>
                 <p>
-                    The most distinctive feature of JigSolitaire is its tile merging system. When you place
-                    two adjacent tiles in their correct positions, they automatically merge into a group.
-                    This group then moves as a single unit. It&apos;s incredibly satisfying to watch sections of
-                    the image snap together and simplify the remaining puzzle.
+                    The most distinctive feature is the tile merging system. When you place two adjacent
+                    tiles in their correct positions, they automatically merge into a group. This group
+                    then moves as a single unit. The merging mechanic provides the same satisfaction as
+                    snapping physical jigsaw pieces together, while the progressive simplification as
+                    groups form creates a sense of building momentum.
                 </p>
                 <h3>Progressive Difficulty</h3>
                 <p>
                     Start with a gentle 3×3 grid (just 9 tiles) and work your way up to a challenging 3×5
-                    grid (15 tiles). The progression feels natural — each step up introduces enough complexity
-                    to keep things interesting without becoming frustrating.
+                    grid (15 tiles). The progression is designed to keep you in what psychologist Mihaly
+                    Csikszentmihalyi calls a &ldquo;flow state&rdquo; — where the challenge matches your skill level,
+                    keeping things interesting without becoming frustrating.
                 </p>
                 <h3>Beautiful Imagery</h3>
                 <p>
@@ -67,6 +74,15 @@ export default function WhatIsJigSolitairePage() {
                     Nature, Cities, Art, and Food. The images aren&apos;t just backdrops — they&apos;re integral to
                     the experience. Recognizing color patterns and visual elements within the tiles is key
                     to solving each puzzle efficiently.
+                </p>
+
+                <h2>The Cognitive Benefits</h2>
+                <p>
+                    Beyond entertainment, tile-swapping puzzles engage multiple cognitive systems simultaneously.
+                    Research in cognitive psychology has shown that spatial puzzle games exercise visual-spatial
+                    processing, working memory, and executive function — the cognitive skills involved in planning,
+                    decision-making, and flexible thinking. A study by Levine et al. (2012) found that early
+                    puzzle play is a predictor of later spatial reasoning ability.
                 </p>
 
                 <h2>Who Is It For?</h2>
@@ -90,8 +106,21 @@ export default function WhatIsJigSolitairePage() {
                 </p>
                 <p>
                     For a detailed walkthrough, check out our{' '}
-                    <Link href="/how-to-play">How to Play guide</Link>.
+                    <Link href="/how-to-play">How to Play guide</Link>. And if you want to improve your
+                    technique, our <Link href="/blog/tips-and-tricks">Tips &amp; Tricks article</Link> covers
+                    strategies from beginner to advanced.
                 </p>
+
+                <Sources sources={[
+                    { id: 1, text: 'Csikszentmihalyi, M. (1990). Flow: The Psychology of Optimal Experience. Harper & Row.' },
+                    { id: 2, text: 'Levine, S. C., et al. (2012). Early puzzle play: A predictor of preschoolers\' spatial transformation skill. Developmental Psychology, 48(2), 530–542.', url: 'https://doi.org/10.1037/a0025913' },
+                ]} />
+
+                <RelatedArticles articles={[
+                    { slug: 'tips-and-tricks', title: 'Pro Tips & Tricks to Master JigSolitaire', excerpt: 'Expert strategies for tile-swapping, from beginner basics to advanced optimization.', category: 'Strategy', readTime: '7 min read' },
+                    { slug: 'benefits-of-puzzle-games', title: '7 Brain Benefits of Playing Puzzle Games', excerpt: 'Seven science-backed cognitive benefits of regular puzzle practice.', category: 'Science', readTime: '6 min read' },
+                    { slug: 'history-of-puzzle-games', title: 'The Fascinating History of Jigsaw & Solitaire Games', excerpt: 'From 18th-century dissected maps to modern digital puzzles.', category: 'History', readTime: '8 min read' },
+                ]} />
 
                 <AdSlot type="banner" />
             </div>

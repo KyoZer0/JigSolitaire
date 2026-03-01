@@ -10,6 +10,9 @@ const footerLinks = {
         { href: '/blog', label: 'Blog' },
         { href: '/blog/tips-and-tricks', label: 'Tips & Tricks' },
         { href: '/blog/benefits-of-puzzle-games', label: 'Brain Benefits' },
+        { href: '/blog/neuroscience-of-puzzle-solving', label: 'Neuroscience' },
+        { href: '/blog/history-of-card-games', label: 'Card Game History' },
+        { href: '/blog/screen-time-guide', label: 'Screen Time Guide' },
     ],
     'Company': [
         { href: '/about', label: 'About' },

@@ -31,6 +31,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/blog/tips-and-tricks', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/blog/history-of-puzzle-games', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/blog/best-puzzle-games-for-kids', priority: 0.6, changeFrequency: 'monthly' as const },
+    // Science category
+    { path: '/blog/neuroscience-of-puzzle-solving', priority: 0.6, changeFrequency: 'monthly' as const },
+    { path: '/blog/puzzles-and-focus', priority: 0.6, changeFrequency: 'monthly' as const },
+    { path: '/blog/puzzle-solving-psychology', priority: 0.6, changeFrequency: 'monthly' as const },
+    // Strategy category
+    { path: '/blog/pattern-recognition-skills', priority: 0.6, changeFrequency: 'monthly' as const },
+    { path: '/blog/brain-training-techniques', priority: 0.6, changeFrequency: 'monthly' as const },
+    { path: '/blog/mindfulness-and-puzzles', priority: 0.6, changeFrequency: 'monthly' as const },
+    // History category
+    { path: '/blog/history-of-card-games', priority: 0.6, changeFrequency: 'monthly' as const },
+    { path: '/blog/famous-puzzle-designers', priority: 0.6, changeFrequency: 'monthly' as const },
+    { path: '/blog/golden-age-of-puzzles', priority: 0.6, changeFrequency: 'monthly' as const },
+    // Family category
+    { path: '/blog/screen-time-guide', priority: 0.6, changeFrequency: 'monthly' as const },
+    { path: '/blog/family-game-night', priority: 0.6, changeFrequency: 'monthly' as const },
+    { path: '/blog/puzzles-build-resilience', priority: 0.6, changeFrequency: 'monthly' as const },
+    // Reviews category
+    { path: '/blog/best-free-online-puzzle-games', priority: 0.6, changeFrequency: 'monthly' as const },
+    { path: '/blog/puzzles-vs-social-media', priority: 0.6, changeFrequency: 'monthly' as const },
+    { path: '/blog/puzzles-for-seniors', priority: 0.6, changeFrequency: 'monthly' as const },
   ];
 
   // Category pages
