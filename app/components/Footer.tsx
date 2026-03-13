@@ -20,7 +20,7 @@ const footerLinks = {
         { href: '/accessibility', label: 'Accessibility' },
     ],
     'Legal': [
-        { href: '/privacy-policy', label: 'Privacy' },
+        { href: '/privacy-policy', label: 'Privacy Policy' },
         { href: '/terms', label: 'Terms' },
         { href: '/cookie-policy', label: 'Cookies' },
         { href: '/disclaimer', label: 'Disclaimer' },

@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { categories, getCategoryBySlug } from '../../lib/gameData';
-import AdSlot from '../../components/AdSlot';
 
 // Generate static params for all categories
 export function generateStaticParams() {
@@ -85,8 +84,6 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                     {cat.longDescription}
                 </p>
 
-                <AdSlot type="banner" />
-
                 <h2 style={{ marginTop: '2rem', marginBottom: '1.5rem' }}>
                     All {cat.name} Levels
                 </h2>
@@ -156,9 +153,6 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                         </Link>
                     ))}
                 </div>
-
-                <AdSlot type="banner" />
-
                 {/* SEO content for category */}
                 <div style={{ marginTop: '3rem', color: 'var(--text-secondary)', lineHeight: 1.8 }}>
                     <h2 style={{ color: 'var(--primary-light)' }}>About {cat.name} Puzzles</h2>

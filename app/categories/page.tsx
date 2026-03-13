@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     'Browse all JigSolitaire puzzle categories. Explore Animals, Nature, Cities, Art, and Food levels with beginner-to-expert difficulty.',
   keywords: ['puzzle categories', 'jigsaw categories', 'JigSolitaire categories'],
+  alternates: {
+    canonical: '/categories',
+  },
 };
 
 export default function CategoriesPage() {

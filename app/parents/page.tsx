@@ -1,6 +1,4 @@
 import type { Metadata } from 'next';
-import AdSlot from '../components/AdSlot';
-
 export const metadata: Metadata = {
     title: 'Parents & Safety Guide',
     description: 'JigSolitaire is a safe, educational, and family-friendly puzzle game. Learn how we protect children and promote healthy screen time.',
@@ -38,8 +36,6 @@ export default function ParentsPage() {
                     <li><strong>Fine Motor Skills:</strong> Drag-and-drop interactions develop hand-eye coordination and fine motor control.</li>
                     <li><strong>Confidence:</strong> Successfully solving puzzles builds self-esteem and a sense of achievement.</li>
                 </ul>
-
-                <AdSlot type="in-content" />
 
                 <h2>Our Safety Commitments</h2>
 
@@ -109,8 +105,6 @@ export default function ParentsPage() {
                     please don&apos;t hesitate to <a href="/contact">contact us</a>. We prioritize parent
                     communications and respond within 24 hours to safety-related inquiries.
                 </p>
-
-                <AdSlot type="banner" />
             </div>
         </>
     );

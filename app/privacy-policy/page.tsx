@@ -41,7 +41,7 @@ export default function PrivacyPolicyPage() {
                     <li>Device type (desktop, mobile, tablet)</li>
                 </ul>
                 <p>
-                    This information is collected through analytics tools and is used to understand how
+                    This information is collected through standard server logs and is used to understand how
                     visitors interact with our website so we can improve the user experience.
                 </p>
 
@@ -71,17 +71,6 @@ export default function PrivacyPolicyPage() {
                     websites. You can opt out of personalized advertising by visiting{' '}
                     <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">
                         Google Ad Settings
-                    </a>.
-                </p>
-
-                <h3>3.2 Google Analytics</h3>
-                <p>
-                    We use Google Analytics to understand how visitors interact with our website. Google
-                    Analytics collects information such as how often users visit the site, what pages they
-                    visit, and what other sites they used prior to coming to our site. You can opt out of
-                    Google Analytics by installing the{' '}
-                    <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">
-                        Google Analytics Opt-out Browser Add-on
                     </a>.
                 </p>
 
@@ -134,8 +123,7 @@ export default function PrivacyPolicyPage() {
                 <h2>8. Data Retention</h2>
                 <p>
                     We retain personal data only for as long as necessary to fulfill the purposes for which
-                    it was collected, or as required by law. Analytics data is retained in aggregate form
-                    and does not identify individual users.
+                    it was collected, or as required by law.
                 </p>
 
                 <h2>9. International Data Transfers</h2>

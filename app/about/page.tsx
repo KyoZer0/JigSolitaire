@@ -1,6 +1,4 @@
 import type { Metadata } from 'next';
-import AdSlot from '../components/AdSlot';
-
 export const metadata: Metadata = {
     title: 'About Us – JigSolitaire',
     description: 'Learn about JigSolitaire, our mission to create the ultimate free online puzzle experience, and the team behind the game.',
@@ -43,8 +41,6 @@ export default function AboutPage() {
                     the puzzles.
                 </p>
 
-                <AdSlot type="in-content" />
-
                 <h2>What Makes Us Different</h2>
                 <p>
                     Unlike traditional jigsaw apps, JigSolitaire uses a unique tile-swapping mechanic. Instead
@@ -86,8 +82,6 @@ export default function AboutPage() {
                     <a href="/contact">Contact page</a>. Your input helps us make JigSolitaire better for
                     everyone.
                 </p>
-
-                <AdSlot type="banner" />
             </div>
         </>
     );

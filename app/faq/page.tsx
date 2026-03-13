@@ -1,6 +1,4 @@
 import type { Metadata } from 'next';
-import AdSlot from '../components/AdSlot';
-
 export const metadata: Metadata = {
     title: 'FAQ – JigSolitaire',
     description: 'Frequently asked questions about JigSolitaire. Find answers about gameplay, features, device support, and more.',
@@ -59,8 +57,6 @@ export default function FAQPage() {
                         <p>{faq.a}</p>
                     </div>
                 ))}
-
-                <AdSlot type="banner" />
             </div>
         </>
     );

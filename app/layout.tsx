@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import Script from 'next/script';
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import AdSenseLoader from './components/AdSenseLoader';
+import CookieConsentBanner from './components/CookieConsentBanner';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -40,9 +41,6 @@ export const metadata: Metadata = {
   creator: "JigSolitaire",
   publisher: "JigSolitaire",
   metadataBase: new URL("https://jigsolitaire.online"),
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -86,16 +84,8 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <head>
-        {publisherId ? (
-          <Script
-            id="adsense-script"
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${publisherId}`}
-            crossOrigin="anonymous"
-            strategy="afterInteractive"
-          />
-        ) : null}
+        <head>
+        <AdSenseLoader publisherId={publisherId} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -106,11 +96,6 @@ export default function RootLayout({
               url: "https://jigsolitaire.online",
               description:
                 "Free online jigsaw solitaire puzzle game with 25+ levels across 5 categories.",
-              potentialAction: {
-                "@type": "SearchAction",
-                target: "https://jigsolitaire.online/categories?q={search_term_string}",
-                "query-input": "required name=search_term_string",
-              },
             }),
           }}
         />
@@ -119,6 +104,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <CookieConsentBanner />
       </body>
     </html>
   );

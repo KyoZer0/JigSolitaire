@@ -26,6 +26,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Blog posts
   const blogPosts = [
+    { path: '/blog/how-to-get-better-at-jigsaw-puzzles', priority: 0.6, changeFrequency: 'monthly' as const },
+    { path: '/blog/are-puzzles-good-for-anxiety-and-stress', priority: 0.6, changeFrequency: 'monthly' as const },
+    { path: '/blog/best-puzzle-routine-for-busy-adults', priority: 0.6, changeFrequency: 'monthly' as const },
+    { path: '/blog/how-to-choose-the-right-puzzle-difficulty', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/blog/what-is-jigsolitaire', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/blog/benefits-of-puzzle-games', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/blog/tips-and-tricks', priority: 0.6, changeFrequency: 'monthly' as const },

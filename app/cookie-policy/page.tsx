@@ -47,14 +47,8 @@ export default function CookiePolicyPage() {
 
                 <h3>Analytics Cookies</h3>
                 <p>
-                    We use analytics cookies (such as Google Analytics) to understand how visitors interact
-                    with our website. These cookies help us identify areas for improvement and measure the
-                    effectiveness of our content.
+                    We currently do not use any tracking or analytics cookies (such as Google Analytics) on JigSolitaire.
                 </p>
-                <ul>
-                    <li><strong>Google Analytics (_ga, _gid):</strong> Tracks page views, user sessions, and browsing patterns. Data is anonymized and aggregated.</li>
-                    <li><strong>Performance cookies:</strong> Help us understand load times and identify technical issues.</li>
-                </ul>
 
                 <h3>Advertising Cookies</h3>
                 <p>
@@ -67,10 +61,9 @@ export default function CookiePolicyPage() {
                     <li><strong>DoubleClick (DSID, IDE):</strong> Used for ad serving and retargeting across the Google Display Network</li>
                 </ul>
 
-                <h3>Preference Cookies</h3>
+                <h3>Preference Cookies & Local Storage</h3>
                 <p>
-                    These cookies remember choices you make on the website, such as your preferred game
-                    category or sound settings, to provide a more personalized experience.
+                    We use your browser's Local Storage to remember choices you make on the website, such as your preferred sound settings and your game progress, to provide a more personalized experience without needing an account.
                 </p>
 
                 <h2>Third-Party Cookies</h2>
@@ -79,7 +72,6 @@ export default function CookiePolicyPage() {
                     the cookies set by third parties. The main third-party services we use include:
                 </p>
                 <ul>
-                    <li><strong>Google Analytics:</strong> Web analytics service. <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener noreferrer">Google&apos;s Cookie Policy</a></li>
                     <li><strong>Google AdSense:</strong> Advertising service. <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google&apos;s Ad Technology Policy</a></li>
                 </ul>
 
@@ -103,13 +95,7 @@ export default function CookiePolicyPage() {
                     <li><a href="https://support.microsoft.com/en-us/microsoft-edge/manage-cookies-in-microsoft-edge" target="_blank" rel="noopener noreferrer">Microsoft Edge</a></li>
                 </ul>
 
-                <h3>Opt-Out of Google Analytics</h3>
-                <p>
-                    You can opt out of Google Analytics by installing the{' '}
-                    <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">
-                        Google Analytics Opt-out Browser Add-on
-                    </a>.
-                </p>
+
 
                 <h3>Opt-Out of Personalized Ads</h3>
                 <p>
